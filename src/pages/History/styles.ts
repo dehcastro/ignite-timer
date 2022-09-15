@@ -60,3 +60,22 @@ export const HistotyList = styled.div`
     }
   }
 `
+
+interface StatusProps {
+  statusColor: 'yellow' | 'red' | 'green'
+}
+
+export const Status = styled.span<StatusProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: ${({ theme, statusColor }) =>
+      theme[`${statusColor}-500`]};
+  }
+`
