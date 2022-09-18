@@ -78,8 +78,6 @@ const CyclesProvider = ({ children }: ContextProps) => {
     setCycles((currentState) => [...currentState, newCycle])
     setActiveCycleId(id)
     setAmountPassedSeconds(0)
-
-    // reset()
   }
 
   function stopCycle() {

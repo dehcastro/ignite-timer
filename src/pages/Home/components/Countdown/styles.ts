@@ -13,6 +13,14 @@ export const CountdownContainer = styled.div`
     background-color: ${({ theme }) => theme['gray-700']};
     padding: 2rem 1rem;
     border-radius: 8px;
+
+    &:hover {
+      cursor: default;
+    }
+
+    &::selection {
+      background-color: transparent;
+    }
   }
 `
 
@@ -24,4 +32,12 @@ export const Separator = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    cursor: default;
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
 `
