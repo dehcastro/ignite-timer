@@ -9,7 +9,6 @@ export function Countdown() {
     activeCycleId,
     amountPassedSeconds,
     markCurrentCycleAsFinished,
-    setActiveCycleIdAsNull,
     setSecondsPassed,
   } = useCycles()
 
@@ -41,7 +40,6 @@ export function Countdown() {
 
         if (differenceInSeconds >= cycleTotalSeconds) {
           markCurrentCycleAsFinished()
-          setActiveCycleIdAsNull()
           clearInterval(currentCycle)
         } else {
           setSecondsPassed(differenceInSeconds)
@@ -55,7 +53,6 @@ export function Countdown() {
     cycleTotalSeconds,
     activeCycleId,
     markCurrentCycleAsFinished,
-    setActiveCycleIdAsNull,
     setSecondsPassed,
   ])
 
